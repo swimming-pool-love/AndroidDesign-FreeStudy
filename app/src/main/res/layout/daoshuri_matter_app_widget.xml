@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/appwidget_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:contentDescription="倒数日"
+            android:text="倒数日"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/appwidget_add"
+            android:src="@drawable/ic_add_white_24dp"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/appwidget_list"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#ffffff"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.finalwork.Activity.daoshuri.TypeManagerActivity">
+
+    <LinearLayout
+        android:id="@+id/llTimePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llTimeNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <!-- 在此定义页面主体布局 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_arrow_back_white_shadow_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:text="倒数本"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+    <!-- 以下为导航栏的布局 -->
+    <LinearLayout
+        android:id="@+id/llTimeNav"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/navBack"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTimePage">
+
+        <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavStudy"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_study_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavStudy"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavTime"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_time_selected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavTime"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navActivated"
+            tools:ignore="OnClick" />
+
+        <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavShare"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_share_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavShare"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+        <Button
+            android:id="@+id/btnNavData"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_data_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavData"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavCard"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_card_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavCard"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

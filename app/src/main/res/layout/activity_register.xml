@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.finalwork.Activity.login.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imgView_logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgView_logo_rays"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:rotation="180"
+        android:layout_marginTop="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgView_cloudLeft"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/cloud"
+        android:translationX="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/lightGrey" />
+
+
+    <ImageView
+        android:id="@+id/imgView_cloudRight"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="104dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/cloud"
+        android:translationX="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/lightGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/imgView_cloudRight"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_horizontal"
+            android:text="Please Register"
+            android:textColor="@color/textHeadline"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/imgView_logo"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlay_inputs"
+        android:layout_width="335dp"
+        android:layout_height="366dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgView_cloudRight">
+
+        <EditText
+            android:id="@+id/rpname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_account_box_24"
+            android:drawableLeft="@drawable/ic_baseline_account_box_24"
+            android:drawablePadding="16dp"
+            android:hint="account"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:id="@+id/rpwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/ic_baseline_visibility_24"
+            android:drawableRight="@drawable/ic_baseline_visibility_24"
+            android:drawablePadding="16dp"
+            android:hint="Please Input Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rpwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/ic_baseline_visibility_24"
+            android:drawableRight="@drawable/ic_baseline_visibility_24"
+            android:drawablePadding="16dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawableLeft="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="16dp"
+            android:hint="Please Input telephone"
+            android:inputType="phone"
+            android:padding="16dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_bg"
+            android:text="注册"
+            android:textSize="20dp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

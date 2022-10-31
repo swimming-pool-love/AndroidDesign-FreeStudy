@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="MatterStore"></dbname>
+    <version value="4"></version>
+    <list>
+        <mapping class="com.example.finalwork.model.Matter"></mapping>
+        <mapping class="com.example.finalwork.model.TypeBean"></mapping>
+
+    </list>
+</litepal>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Free Study</string>
+    <string name="register_button">Don\'t have an account? <b>Register Here</b></string>
+    <string name="account">Account</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_websearch">Search</string>
+    <string name="action_add">Add</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="task_title">Task</string>
+    <string name="task_content">Comment</string>
+    <string name="detail_desc">Create Task</string>
+    <string name="imageview_contentdesc">detail</string>
+    <string name="mark_complete">Mark Complete    </string>
+    <string name="mark_uncomplete">Mark Uncomplete    </string>
+    <string name="about_me">About Me</string>
+    <string name="initializedb">Initialize Database</string>
+    <!-- 这个是我们新添加的字符串 -->
+    <string name="dlgExitMsg">确定要退出吗？</string>
+    <string name="dialog_btn_confirm_text">确定</string>
+    <string name="dialog_btn_cancel_text">取消</string>
+    <!-- 顺便把之后要用到的字符串也一并准备了 -->
+    <string name="btnNavStudy">任务清单</string>
+    <string name="btnNavTime">未来沙漏</string>
+    <string name="btnNavShare">记录分享</string>
+    <string name="btnNavData">课程制定</string>
+    <string name="btnNavCard">卡片收集</string>
+
+</resources>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.finalwork">
+    <!-- 下载时不提示通知栏 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- CAMERA相机权限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!--外部存储的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--外部存储的读权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/application"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/application"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name="com.example.finalwork.Activity.course.MainActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme_2">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.share.PublishMainActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme_2">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.personalcenter.CheckMyPublishActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme_2">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.course.AddCourseActivity"
+            android:label="新建课程"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme_3">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.share.RecommendActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.card.CardViewPagerActivity"
+            android:exported="false"
+            android:label="Card ViewPager"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.Yyxtodolist">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name="com.example.finalwork.Activity.alarm.PlayAlarmActivity"/>
+        <receiver android:name="com.example.finalwork.Receiver.AlarmReceiver" android:process=":remote"/>
+        <activity
+            android:name="com.example.finalwork.Activity.alarm.AlarmMainActivity"
+            android:exported="true"
+            android:label="Alarm MainActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme_2">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.todolist.todolistMainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.Yyxtodolist">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.todolist.todolistDetailActivity"
+            android:label="@string/detail_desc"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.Yyxtodolist">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.login.ForgetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.login.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.login.MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.AddTypeActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.TypeManagerActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.DaoshuriMainActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.MatterAddActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.MatterDetailActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="com.example.finalwork.Activity.daoshuri.DaoshuriMainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.MatterEditActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+
+        <receiver
+            android:name="com.example.finalwork.Receiver.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.finalwork.Widget.MatterAppWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/daoshuri_matter_app_widget_info" />
+        </receiver>
+
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.TypeListActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.finalwork.Activity.daoshuri.QueryByTypeActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name="com.example.finalwork.Widget.ListViewService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name="com.example.finalwork.Service.NotificationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.example.finalwork.Activity.card.MusicService" />
+    </application>
+
+</manifest>

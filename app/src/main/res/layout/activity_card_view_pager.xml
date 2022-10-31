@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:background="@drawable/card_bg"
+    tools:context=".Activity.card.CardViewPagerActivity">
+
+    <LinearLayout
+        android:id="@+id/llHomePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llHomeNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--
+        该 LinearLayout 为主体页面布局的容器，你也可以根据需要换成其他形式的 Layout
+        以上代码将页面布局容器和底部的导航栏进行了约束
+        即该容器的底端和导航栏的顶端彼此约束
+        确保该容器的占用空间不会覆盖导航栏
+        页面的主体布局请在该容器内部（即此处）创建
+        -->
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:padding="0dp"
+            android:src="@drawable/play" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/cardViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="0dp"
+            android:clipChildren="false"
+            android:overScrollMode="never"/>
+
+
+
+    </LinearLayout>
+
+    <!-- 以下为导航栏的布局 -->
+    <LinearLayout
+        android:id="@+id/llHomeNav"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/navBack"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llHomePage">
+
+        <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavStudy"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_study_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavStudy"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavTime"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_time_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavTime"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavShare"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_share_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavShare"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+        <Button
+            android:id="@+id/btnNavData"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_data_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavData"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavCard"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_card_selected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavCard"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navActivated"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

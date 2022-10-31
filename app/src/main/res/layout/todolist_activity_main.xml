@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.finalwork.Activity.todolist.todolistMainActivity" >
+
+    <LinearLayout
+        android:id="@+id/llStudyPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llStudyNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- 在此定义页面主体布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/alarm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/imageview_contentdesc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_alarm" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="6pt"
+                android:paddingStart="20dp"
+                android:text="累计任务时长："/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="6pt"
+                android:text="0"/>
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="开始"
+                android:textSize="16dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/lvTask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:dividerHeight="10dp"
+                android:listSelector="@android:color/transparent"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <!-- 以下为导航栏的布局 -->
+    <LinearLayout
+        android:id="@+id/llStudyNav"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/navBack"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llStudyPage">
+
+        <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavStudy"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_study_selected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavStudy"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navActivated"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavTime"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_time_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavTime"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavShare"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_share_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavShare"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+        <Button
+            android:id="@+id/btnNavData"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_data_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavData"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+        <Button
+            android:id="@+id/btnNavCard"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_card_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavCard"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFB20C</color>
+    <color name="colorPrimaryDark">#DE9B0B</color>
+    <color name="colorAccent">#FFB20C</color>
+    <color name="textHeadline">#434343</color>
+    <color name="textDescription">#686868</color>
+    <color name="lightGrey">#EAEAEA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="clear">#00000000</color>
+    <color name="block">#60000000</color>
+    <color name="black">#FF000000</color>
+    <color name="yellow">#FFB20C</color>
+    <color name="yellow1">#DDB000</color>
+    <color name="yellow2">#DDD456</color>
+    <color name="yellow3">#DDC000</color>
+
+    <color name="theme">#0c0c0d</color>
+    <color name="future">#2e78da</color>
+    <color name="future_light">#387fe1</color>
+    <color name="expired">#e96d2a</color>
+    <color name="expired_light">#eb7e43</color>
+    <color name="dark">#302f2f</color>
+
+    <color name="red">#d11616</color>
+    <!-- 定义导航栏的相关颜色 -->
+    <color name="navBack">#F2F2F2</color> <!-- 导航栏背景色 Grey 300-->
+    <color name="navNormal">#000000</color> <!-- 未激活项目的文字颜色 Black -->
+    <color name="navActivated">#039be5</color> <!-- 已激活项目的文字颜色 Light Blue 600 -->
+    <!-- 定义悬浮按钮未点击和点击后的颜色  -->
+    <color name="colorNormal">#ffc93c</color>
+    <color name="colorPressed">#fce38a</color>
+
+</resources>

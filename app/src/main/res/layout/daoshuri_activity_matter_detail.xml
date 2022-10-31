@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bj3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llTimePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llTimeNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- 在此定义页面主体布局 -->
+
+        <include layout="@layout/daoshuri_toolbar" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="5dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/detail_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.34"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/detail_before_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/matter_detail_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/detail_after_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/matter_detail_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="300"
+                            android:textColor="@color/dark"
+                            android:textSize="80sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="天"
+                            android:textColor="@color/dark"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#90909090"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal">
+
+
+                        <TextView
+                            android:id="@+id/event_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="目标日 "
+                            android:textColor="@color/dark"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/matter_target_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2017-08-15"
+                            android:textColor="@color/dark"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 以下为导航栏的布局 -->
+    <LinearLayout
+        android:id="@+id/llTimeNav"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/navBack"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTimePage">
+
+        <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavStudy"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_study_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavStudy"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavTime"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_time_selected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavTime"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navActivated"
+            tools:ignore="OnClick" />
+
+        <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/btnNavShare"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_share_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavShare"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+        <Button
+            android:id="@+id/btnNavData"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_data_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavData"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btnNavCard"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_card_unselected"
+            android:onClick="onNavButtonsTapped"
+            android:text="@string/btnNavCard"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/navNormal"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

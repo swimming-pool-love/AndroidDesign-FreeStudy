@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/single_1"
+            android:icon="@drawable/ic_passwordkey"
+            android:title="修改密码"
+           />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/single_2"
+            android:icon="@drawable/ic_my_publish"
+            android:title="我的发布"
+            app:actionLayout="@layout/bage_hint"/>
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/single_3"
+            android:icon="@drawable/ic_crown"
+            android:title="VIP专享"
+            app:actionLayout="@layout/vip_view"
+            />
+    </group>
+
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/single_4"
+            android:icon="@drawable/ic_about_me"
+            android:title="关于我们"
+            />
+    </group>
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/single_5"
+            android:icon="@drawable/ic_update"
+            android:title="检查更新" />
+    </group>
+
+
+</menu>
