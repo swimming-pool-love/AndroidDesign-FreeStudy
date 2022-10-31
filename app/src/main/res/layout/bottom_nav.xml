@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llShareNav"
+    style="?android:attr/buttonBarStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/navBack"
+    android:orientation="horizontal">
+
+    <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+    <Button
+        android:id="@+id/btnNavStudy"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_study_unselected"
+        android:onClick="onNavButtonsTapped"
+        android:text="@string/btnNavStudy"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/navNormal" />
+
+    <Button
+        android:id="@+id/btnNavTime"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_time_unselected"
+        android:onClick="onNavButtonsTapped"
+        android:text="@string/btnNavTime"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/navNormal" />
+
+    <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+    <Button
+        android:id="@+id/btnNavShare"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_share_selected"
+        android:onClick="onNavButtonsTapped"
+        android:text="@string/btnNavShare"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/navActivated" />
+
+    <Button
+        android:id="@+id/btnNavData"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_data_unselected"
+        android:onClick="onNavButtonsTapped"
+        android:text="@string/btnNavData"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/navNormal" />
+
+    <Button
+        android:id="@+id/btnNavCard"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_card_unselected"
+        android:onClick="onNavButtonsTapped"
+        android:text="@string/btnNavCard"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/navNormal" />
+
+</LinearLayout>
