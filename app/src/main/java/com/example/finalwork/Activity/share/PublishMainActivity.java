@@ -91,7 +91,6 @@ public class PublishMainActivity extends BaseActivity {
             public void onNothingSelected(AdapterView<?> arg0) {
                 // TODO Auto-generated method stub
             }
-
         });
 //
 
@@ -101,7 +100,8 @@ public class PublishMainActivity extends BaseActivity {
             public void onClick(View v) {
                 if(ContextCompat.checkSelfPermission(PublishMainActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(PublishMainActivity.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+                    ActivityCompat.requestPermissions(PublishMainActivity.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                            1);
                 }
                 else {
                     //打开系统相册
@@ -180,34 +180,6 @@ public class PublishMainActivity extends BaseActivity {
             default:
         }
     }
-//    // 底部导航栏，请注意本方法内容的变化
-//    public void onNavButtonsTapped(View v) {
-//        switch (v.getId()) {
-//            case R.id.btnNavStudy:
-//                open(todolistMainActivity.class);
-//                break; // case R.id.btnNavStudy
-//            case R.id.btnNavTime:
-//                open(DaoshuriMainActivity.class);
-//                break; // case R.id.btnNavTime
-//            case R.id.btnNavData:
-//                open(com.example.finalwork.course.MainActivity.class);
-//                break; // case R.id.btnNavData
-//            case R.id.btnNavCard:
-//                open(CardViewPagerActivity.class);
-//                break; // case R.id.btnNavCard
-//
-//        } // switch (v.getId())
-//    } // onNavButtonsTapped()
-//
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            showExitDialog();
-//            return true;
-//        } // if (keyCode == KeyEvent.KEYCODE_BACK)
-//        else {
-//            return super.onKeyDown(keyCode, event);
-//        } // else
-//    } // onKeyDown()
+
 }
 

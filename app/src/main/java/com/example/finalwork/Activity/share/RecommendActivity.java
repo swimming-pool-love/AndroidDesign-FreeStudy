@@ -149,9 +149,9 @@ public class RecommendActivity extends BaseActivity {
         staggerRecycler3.setAdapter(gridAdapter3);
 
 
-        swipeRefreshLayout1 = viewOne.findViewById(R.id.refreshLayout);
-        swipeRefreshLayout2 = viewTwo.findViewById(R.id.refreshLayout);
-        swipeRefreshLayout3 = viewThree.findViewById(R.id.refreshLayout);
+        swipeRefreshLayout1 = viewOne.findViewById(R.id.refreshLayout); //找到经验栏的refreshLayout
+        swipeRefreshLayout2 = viewTwo.findViewById(R.id.refreshLayout);//找到计划栏的refreshLayout
+        swipeRefreshLayout3 = viewThree.findViewById(R.id.refreshLayout);//找到记录栏的refreshLayout
         //为下拉刷新，设置一组颜色
         swipeRefreshLayout1.setColorSchemeColors(Color.BLUE, Color.RED, Color.GREEN);
         swipeRefreshLayout2.setColorSchemeColors(Color.BLUE, Color.RED, Color.GREEN);
@@ -201,9 +201,7 @@ public class RecommendActivity extends BaseActivity {
                         }
                     }
                 }, 1500);
-
             }
-
         });
 
         swipeRefreshLayout3.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -222,9 +220,7 @@ public class RecommendActivity extends BaseActivity {
                         }
                     }
                 }, 1500);
-
             }
-
         });
 
 
@@ -458,7 +454,6 @@ public class RecommendActivity extends BaseActivity {
                 etnpwd=view.findViewById(R.id.etnpwd);
                 etnpwd2=view.findViewById(R.id.etnpwd2);
                 etnphone=view.findViewById(R.id.etnphone);
-//                builder.setTitle("修改密码");
                 builder.setView(view);
                 builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 
@@ -524,7 +519,7 @@ public class RecommendActivity extends BaseActivity {
                 dialog.show();
 
                 //加载布局并初始化组件
-                View dialogView = LayoutInflater.from(RecommendActivity.this).inflate(R.layout.publish_dialog_cancel_or_not,null);
+                View dialogView = LayoutInflater.from(RecommendActivity.this).inflate(R.layout.exit_dialog_cancel_or_not,null);
                 TextView dialogText = (TextView) ((View) dialogView).findViewById(R.id.alert_dialog_text);
                 Button dialogBtnConfirm = (Button) dialogView.findViewById(R.id.alert_dialog_btn_confirm);
                 Button dialogBtnCancel = (Button) dialogView.findViewById(R.id.alert_dialog_btn_cancel);

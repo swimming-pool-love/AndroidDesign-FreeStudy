@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.finalwork.Activity.personalcenter.SlideRecyclerView
+    <com.example.finalwork.Widget.SlideRecyclerView
         android:id="@+id/line_recy_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

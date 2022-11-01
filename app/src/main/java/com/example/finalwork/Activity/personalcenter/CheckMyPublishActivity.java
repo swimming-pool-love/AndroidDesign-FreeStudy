@@ -20,6 +20,7 @@ import com.example.finalwork.Adapter.PersonalCenter.RecyclerLineAdapter;
 import com.example.finalwork.Adapter.PersonalCenter.updownRemove.myItemTouchHelperCallBack;
 import com.example.finalwork.Database.SQLiteHelper;
 import com.example.finalwork.R;
+import com.example.finalwork.Widget.SlideRecyclerView;
 import com.example.finalwork.bottomnavigation.base.BaseActivity;
 import com.example.finalwork.model.Share;
 
@@ -93,7 +94,8 @@ public class CheckMyPublishActivity extends BaseActivity {
         SQLiteHelper database = new SQLiteHelper(this);
         SQLiteDatabase db = database.getWritableDatabase();
         String TABLENAME = "share";
-        Cursor c = db.query(TABLENAME,null,"userName=?",new String[]{post_userid},null,null,null,null);
+        Cursor c = db.query(TABLENAME,null,"userName=?",new String[]{post_userid},
+                null,null,null,null);
         byte[] imageData;
         Bitmap imageBm;
 

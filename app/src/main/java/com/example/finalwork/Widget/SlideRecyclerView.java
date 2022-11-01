@@ -1,4 +1,4 @@
-package com.example.finalwork.Activity.personalcenter;
+package com.example.finalwork.Widget;
 
 import android.content.Context;
 import android.graphics.Rect;
